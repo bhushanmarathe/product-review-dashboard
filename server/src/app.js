@@ -25,6 +25,10 @@ app.get("/health", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully");
+});
+
 app.use((err, req, res, next) => {
   console.error(err);
 
